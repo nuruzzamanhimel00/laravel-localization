@@ -21,7 +21,7 @@ class LanguageManager
         // dd('midd');
         // dd(session()->get('locale1'), session('locale'), Session::get('locale1'));
         // App::setLocale('bn');
-        if (session()->has('locale1')) {
+        if (session()->has('locale')) {
             // App::setLocale('bn');
             App::setLocale(session()->get('locale'));
         }
@@ -40,7 +40,7 @@ class LanguageManager
         //      $locale = Session::get('locale', Config::get('app.fallback_locale'));
         //      return redirect($locale . '/' . $request->path());
         //  }
- 
+
         //  return $next($request);
     }
 }

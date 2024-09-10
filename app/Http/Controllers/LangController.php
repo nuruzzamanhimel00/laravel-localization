@@ -30,7 +30,8 @@ class LangController extends Controller
         // // dd('ssesstion get', session('locale'));
         // return redirect()->back();
         $locale = $request->input('locale');
-        // dd($locale, in_array($locale, config('app.supported_locales')));
+        // dd(in_array($locale, config('app.supported_locales')));
+
         // Validate if the locale exists in the supported locales
         if (in_array($locale, config('app.supported_locales'))) {
             Session::put('locale', $locale);
